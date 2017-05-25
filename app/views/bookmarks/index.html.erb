@@ -9,6 +9,7 @@
   <div class="col-md-12">
     <table class="table table-striped table-hover">
       <tr>
+        <th>Image</th>
         <th>User</th>
         <th>Movie ID</th>
         <th>Movie Title</th>
@@ -17,9 +18,11 @@
 
       <% @bookmarks.each do |bookmark| %>
       <tr>
+        <td><img src="<%= bookmark.movie.image_url %>"></td>
         <td><%= bookmark.user_id %></td>
         <td><%= bookmark.movie_id %></td>
         <td><%= bookmark.movie.title %></td>
+
         <td>
           <a href="/bookmarks/<%= bookmark.id %>" class="btn btn-primary">Show</a>
           <a href="/bookmarks/<%= bookmark.id %>/edit" class="btn btn-warning">Edit</a>
