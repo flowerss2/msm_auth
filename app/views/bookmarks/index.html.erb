@@ -10,7 +10,8 @@
     <table class="table table-striped table-hover">
       <tr>
         <th>User</th>
-        <th>Movie</th>
+        <th>Movie ID</th>
+        <th>Movie Title</th>
         <th>Actions</th>
       </tr>
 
@@ -18,6 +19,7 @@
       <tr>
         <td><%= bookmark.user_id %></td>
         <td><%= bookmark.movie_id %></td>
+        <td><%= bookmark.movie.title %></td>
         <td>
           <a href="/bookmarks/<%= bookmark.id %>" class="btn btn-primary">Show</a>
           <a href="/bookmarks/<%= bookmark.id %>/edit" class="btn btn-warning">Edit</a>

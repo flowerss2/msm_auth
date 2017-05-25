@@ -13,7 +13,6 @@ class BookmarksController < ApplicationController
 
   def new
     @bookmark = Bookmark.new
-
     render("bookmarks/new.html.erb")
   end
 
